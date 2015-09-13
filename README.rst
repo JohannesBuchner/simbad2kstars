@@ -35,7 +35,7 @@ those with a few nights of observations!
 Usage
 ------
 
-1. Create a KStars catalogue from an arbitrary Simbad query::
+1. Create a KStars catalogue from an arbitrary `Simbad query <http://simbad.u-strasbg.fr/simbad/sim-fsam>`_::
 
 	$ python query.py "Vmag<8.5&otype='GlC'" outputfile.kstarscat
 
@@ -75,7 +75,7 @@ in a given time window, I have included some simple ephemeris calculations.
 	example above, every 20 minutes) is created.
 	Points outside the hour ranges are discarded (in the example the night
 	is between 8pm and 2am).
-	The timezone is in tzinfo format.
+	The timezone is in the common `tz format <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_.
 	
 	At every remaining point the altitude of each object is computed.
 	
