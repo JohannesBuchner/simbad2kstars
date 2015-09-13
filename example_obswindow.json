@@ -1,0 +1,8 @@
+{
+"start": "2015-09-12 18:00:00",
+"stop":  "2015-09-20 02:00:00",
+"steps": 1200,
+"minalt": 15,
+"hourranges": [[20, 24], [0,2]],
+"timezone": "America/Santiago"
+}
