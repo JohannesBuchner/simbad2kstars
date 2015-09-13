@@ -14,10 +14,12 @@ Example Use Cases
 
 General questions:
 
-* Where are exoplanets? (Simbad query: otype='Pl')
+* Where are exoplanets? (Simbad query: otype='Pl').
+
   The list is updated all the time, so it makes sense to just load from simbad.
 
 * What are the brightest Globular Clusters? (Vmag<8.5&otype='GlC')
+  
   A magnitude-cut.
 
 Lets say you have a telecope available, for example for a student, but are not
@@ -39,7 +41,8 @@ Usage
 
 	$ python query.py "Vmag<8.5&otype='GlC'" outputfile.kstarscat
 
-2. Open KStars, go to KStars Settings -> Advanced -> Load catalogue
+2. Open KStars, go to KStars Settings -> Advanced -> Load catalogue.
+
    Loading catalogues is slow, but finally you will have all objects in KStars.
 
 
@@ -57,7 +60,7 @@ in a given time window, I have included some simple ephemeris calculations.
 		"height": 0
 	}
 	
-	Latitude and longitude in degrees, height in meters.
+   Latitude and longitude in degrees, height in meters.
 
 2. Define when you want to do your observations (time window, minimum elevation)::
 
@@ -70,18 +73,18 @@ in a given time window, I have included some simple ephemeris calculations.
 		"timezone": "America/Santiago"
 	}
 
-	When you run query.py, the RA/Dec will be sampled in the time window.
-	Between *start* and *stop* one point every *steps* seconds (in the 
-	example above, every 20 minutes) is created.
-	Points outside the hour ranges are discarded (in the example the night
-	is between 8pm and 2am).
-	The timezone is in the common `tz format <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_.
+   When you run query.py, the RA/Dec will be sampled in the time window.
+   Between *start* and *stop* one point every *steps* seconds (in the 
+   Example above, every 20 minutes) is created.
+   Points outside the hour ranges are discarded (in the example the night
+   is between 8pm and 2am).
+   The timezone is in the common `tz format <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_.
+   
+   At every remaining point the altitude of each object is computed.
 	
-	At every remaining point the altitude of each object is computed.
-	
-	Objects get scores for the maximum altitude reached,
-	and if the altitude is never above *minalt* (in degrees),
-	they are removed from the catalogue.
+   Objects get scores for the maximum altitude reached,
+   and if the altitude is never above *minalt* (in degrees),
+   they are removed from the catalogue.
 	
 	
 3. Run query.py as above. This is of course a very crude tool. KStars has a 
